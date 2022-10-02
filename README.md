@@ -45,7 +45,7 @@ Add the following to the function >> RegisterPrototypes(ProtoRegistrator registr
 	string desc = LangManager.Instance.Get("steam_storage_desc", capacity_steam_T2.ToString());
 	
 # Lang Manager directories
-Captain of Industry\Mods\{your mod name}\Lang\{your languages}\{all files with sub directories}.
+	Captain of Industry\Mods\{your mod name}\Lang\{your languages}\{all files with sub directories}.
 
 # Lang Manager file example(Json format)
 	[
