@@ -3,7 +3,7 @@
 Game Version(Comptability): 0.4.12C
 
 
-#Set your mod data here:
+# Set your mod data here:
 
 	public #Your-Constructer#()
 	{
@@ -14,12 +14,12 @@ Game Version(Comptability): 0.4.12C
 		ModInfo.GithubUrl = "https://github.com/Wehmeyer100/CoI.Mod.Better/releases";
 	}
     
-#Example of generate a research:
+# Example of generate a research:
 
 	ResearchNodeProto researchT1 = GenerateResearchEdict(registrator, MyIDs.Research.GenerellEdictsResearchT1, Name +" I", BetterMod.Config.GenerellEdicts.ResearchCostT1, new ResearchNodeUIData(masterResearch, false, Constants.UIStepSize, Constants.UIStepSize * 2));
 	ResearchNodeProto researchT2 = GenerateResearchEdict(registrator, MyIDs.Research.GenerellEdictsResearchT2, Name +" II", BetterMod.Config.GenerellEdicts.ResearchCostT2, researchT1, false);
       
-#ResearchNodeUIData
+# ResearchNodeUIData
 	
 new ResearchNodeUIData(masterResearch: 1,                                                 false : 2, Constants.UIStepSize : 3, Constants.UIStepSize * 2 : 4)
 
