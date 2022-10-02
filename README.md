@@ -46,6 +46,8 @@ Add the following to the function >> RegisterPrototypes(ProtoRegistrator registr
 	
 # Lang Manager directories
 	Captain of Industry\Mods\{your mod name}\Lang\{your languages}\{all files with sub directories}.
+	
+	Captain of Industry\Mods\CoI.Mod.Better\Lang\en-US\common.json
 
 # Lang Manager file example(Json format)
 	[
