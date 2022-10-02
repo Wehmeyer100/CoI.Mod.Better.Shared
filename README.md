@@ -43,5 +43,16 @@ Add the following to the function >> RegisterPrototypes(ProtoRegistrator registr
 
 	string Name = LangManager.Instance.Get("steam_storage");
 	string desc = LangManager.Instance.Get("steam_storage_desc", capacity_steam_T2.ToString());
+	
+# Lang Manager directories
+Captain of Industry\Mods\{your mod name}\Lang\{your languages}\{all files with sub directories}.
+
+# Lang Manager file example(Json format)
+[
+  {
+    "Key": "farm_multiplier_t1",
+    "Value": "Farm yield multiplier I"
+  }
+]
                        
 For more infos, see you soon!
