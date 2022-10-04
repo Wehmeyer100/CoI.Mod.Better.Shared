@@ -38,6 +38,8 @@
         <Compile Include="Constants.cs" />
         <Compile Include="Extensions\ResearchNodeProtoBuilderState.cs" />
         <Compile Include="GameVersion.cs" />
+        <Compile Include="Lang\LangItem.cs" />
+        <Compile Include="Lang\LangManager.cs" />
         <Compile Include="ModInfo.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Utilities\EdictUtility.cs" />

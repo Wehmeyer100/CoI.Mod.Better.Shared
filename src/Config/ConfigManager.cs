@@ -67,7 +67,7 @@ namespace CoI.Mod.Better.Shared.Config
 
 		public static string GetFilePath(string modDirectoryName, string filePath)
 		{
-			return Constants.GetModDirectory(modDirectoryName) + "/" + filePath + (!filePath.EndsWith(Constants.JsonExt) ? Constants.JsonExt : "");
+			return Constants.ModDirPath + "/" + filePath + (!filePath.EndsWith(Constants.JsonExt) ? Constants.JsonExt : "");
 		}
 		
 		

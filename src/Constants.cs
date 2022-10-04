@@ -21,13 +21,9 @@ namespace CoI.Mod.Better.Shared
 
 		public static string ModRootDirPath => new FileSystemHelper().GetDirPath(FileType.Mod, false);
 		public static string ModDirPath => Path.Combine(ModRootDirPath, ModInfo.Name);
+		public static string LangDirPath    => Path.Combine(ModDirPath, "Lang");
 
 		public static bool IsSharedCompatibility => CurrentGameVersion.Equals(TargetSharedGameVersion, IgnoreHotfix);
 		public static bool IsCompatibility => CurrentGameVersion.Equals(ModInfo.TargetVersion, IgnoreHotfix);
-
-		public static string GetModDirectory(string modDirectoryName)
-		{
-			return Path.Combine(ModRootDirPath, modDirectoryName);
-		}
 	}
 }
