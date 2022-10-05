@@ -28,6 +28,28 @@ namespace CoI.Mod.Better.Shared.Lang
 		}
 
 		public static LangManager Instance => lazy.Value;
+		
+		public void SetOrAdd(string key, string value)
+		{
+			if (langData.ContainsKey(key))
+			{
+				langData[key] = value;
+			}
+			else
+			{
+				langData.Add(key, value);
+			}
+		}
+
+		public void Remove(string key)
+		{
+			langData.Remove(key);
+		}
+		
+		public bool Has(string key)
+		{
+			return langData.ContainsKey(key);
+		}
 
 		public string Get(string key, params string[] replace)
 		{

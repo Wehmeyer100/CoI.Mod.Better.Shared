@@ -36,8 +36,9 @@ namespace CoI.Mod.Better.Shared
 			}
 
 			Debug.Log(ModInfo.Name + " (" + Constants.SharedVersion + ": " + ModInfo.Version + ") >> Directories ..");
-			Debug.Log(" - MOD_ROOT_DIR_PATH: " + Constants.ModRootDirPath);
-			Debug.Log(" - MOD_DIR_PATH: " + Constants.ModDirPath);
+			Debug.Log(" - Constants.ModRootDirPath: " + Constants.ModRootDirPath);
+			Debug.Log(" - Constants.ModDirPath: " + Constants.ModDirPath);
+			Debug.Log(" - Constants.LangDirPath: " + Constants.LangDirPath);
 		}
 	}
 }

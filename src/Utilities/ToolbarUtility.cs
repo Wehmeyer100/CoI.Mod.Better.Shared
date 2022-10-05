@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Col.Mod.Better.Shared.Utilities
+namespace CoI.Mod.Better.Shared.Utilities
 {
 	public class ToolbarUtility
 	{

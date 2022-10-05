@@ -45,6 +45,7 @@
         <Compile Include="Utilities\EdictUtility.cs" />
         <Compile Include="Utilities\EntityProtoUtility.cs" />
         <Compile Include="Utilities\ProductUtility.cs" />
+        <Compile Include="Utilities\ProtoUtility.cs" />
         <Compile Include="Utilities\ReflectionUtility.cs" />
         <Compile Include="Utilities\ResearchNodeUIData.cs" />
         <Compile Include="Utilities\ResearchProtoUtility.cs" />
