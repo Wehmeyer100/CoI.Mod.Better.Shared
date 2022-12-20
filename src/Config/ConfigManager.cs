@@ -20,14 +20,21 @@ namespace CoI.Mod.Better.Shared.Config
 			ReferenceLoopHandling = ReferenceLoopHandling.Serialize
 		};
 
-		public static T LoadOrDefault<T>(string filePath, bool printAfter = false) where T : ConfigBase
+		public static T LoadOrDefault<T>(string filePath, bool printAfter = false) where T : ConfigBase, new()
 		{
 			string configFile = GetFilePath(ModInfo.Directory, filePath);
-			T result = default;
+			T result = new T();
 			if (File.Exists(configFile))
 			{
 				string content = File.ReadAllText(configFile, Encoding.UTF8);
-				result = JsonConvert.DeserializeObject<T>(content, JsonSerializerSettings);
+				try
+				{
+					result = JsonConvert.DeserializeObject<T>(content, JsonSerializerSettings);
+				}
+				catch (Exception)
+				{
+					result = new T();
+				}
 			}
 
 			if (printAfter)
@@ -36,14 +43,21 @@ namespace CoI.Mod.Better.Shared.Config
 			return result;
 		}
 
-		public static T LoadOrCreate<T>(string filePath, bool printAfter = false) where T : ConfigBase
+		public static T LoadOrCreate<T>(string filePath, bool printAfter = false) where T : ConfigBase, new()
 		{
 			string configFile = GetFilePath(ModInfo.Directory, filePath);
-			T result = default;
+			T result = new T();
 			if (File.Exists(configFile))
 			{
 				string content = File.ReadAllText(configFile, Encoding.UTF8);
-				result = JsonConvert.DeserializeObject<T>(content, JsonSerializerSettings);
+				try
+				{
+					result = JsonConvert.DeserializeObject<T>(content, JsonSerializerSettings);
+				}
+				catch (Exception)
+				{
+					result = new T();
+				}
 			}
 
 			File.WriteAllText(configFile, JsonConvert.SerializeObject(result, JsonSerializerSettings));

@@ -17,7 +17,7 @@ namespace CoI.Mod.Better.Shared
 		public const string JsonExt       = ".json";
 
 		public static readonly GameVersion CurrentGameVersion      = new GameVersion();
-		public static readonly GameVersion TargetSharedGameVersion = new GameVersion("Early Access", "0", "4", "12", "e");
+		public static readonly GameVersion TargetSharedGameVersion = new GameVersion("Early Access", "0", "4", "13", "");
 
 		public static string ModRootDirPath => new FileSystemHelper().GetDirPath(FileType.Mod, false);
 		public static string ModDirPath => Path.Combine(ModRootDirPath, ModInfo.Name);
