@@ -7,6 +7,7 @@ using Mafi.Core.Prototypes;
 using Mafi.Core.Research;
 using System;
 using System.Runtime.CompilerServices;
+using CoI.Mod.Better.Shared.Lang;
 using UnityEngine;
 
 namespace CoI.Mod.Better.Shared.Utilities
@@ -153,6 +154,17 @@ namespace CoI.Mod.Better.Shared.Utilities
 
 		private static ResearchNodeProtoBuilder.State _generateResearch(ProtoRegistrator registrator, ResearchNodeProto.ID protoID, string name, string desc, ResearchCostsTpl researchCost)
 		{
+
+			if (LangManager.Instance.Has(name))
+			{
+				name = LangManager.Instance.Get(name);
+			}
+			
+			if (LangManager.Instance.Has(desc))
+			{
+				desc = LangManager.Instance.Get(desc);
+			}
+
 			ResearchNodeProtoBuilder.State researchState = registrator.ResearchNodeProtoBuilder.Start(name, protoID);
 
 			if (!String.IsNullOrEmpty(desc))

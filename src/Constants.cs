@@ -11,13 +11,13 @@ namespace CoI.Mod.Better.Shared
 {
 	public class Constants
 	{
-		public const string SharedVersion = "0.1.0";
+		public const string SharedVersion = "0.1.1";
 		public const bool   IgnoreHotfix  = false;
 		public const int    UIStepSize    = 4;
 		public const string JsonExt       = ".json";
 
 		public static readonly GameVersion CurrentGameVersion      = new GameVersion();
-		public static readonly GameVersion TargetSharedGameVersion = new GameVersion("Early Access", "0", "4", "13", "");
+		public static readonly GameVersion TargetSharedGameVersion = new GameVersion("Early Access", "0", "4", "14", "");
 
 		public static string ModRootDirPath => new FileSystemHelper().GetDirPath(FileType.Mod, false);
 		public static string ModDirPath => Path.Combine(ModRootDirPath, ModInfo.Name);

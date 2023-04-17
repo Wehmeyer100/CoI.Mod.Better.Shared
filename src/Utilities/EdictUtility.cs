@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CoI.Mod.Better.Shared.Lang;
 
 namespace CoI.Mod.Better.Shared.Utilities
 {
@@ -28,10 +29,10 @@ namespace CoI.Mod.Better.Shared.Utilities
 
 		public static EdictWithPropertiesProto GenerateEdict(ProtoRegistrator registrator, Proto.ID protoID, EdictCategoryProto category, string translateKey, float upkeep, PropertyId<Percent> modifer, int percent, Option<EdictProto> previousProto, string iconPath)
 		{
-			//string name = LangManager.Instance.Get(translateKey);
-			string name = translateKey;
-			//string desc = LangManager.Instance.Get(translateKey + "_desc", (percent < 0 ? -percent : percent).ToString());
-			string desc = translateKey + "_desc";
+			string name = LangManager.Instance.Get(translateKey);
+			//string name = translateKey;
+			string desc = LangManager.Instance.Get(translateKey + "_desc", (percent < 0 ? -percent : percent).ToString());
+			//string desc = translateKey + "_desc";
 
 			Option<EdictProto> previousTier = Option<EdictProto>.None;
 			if (previousProto.HasValue)
